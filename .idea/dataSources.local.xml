@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal" created-in="IU-221.5080.210">
-    <data-source name="postgres@localhost" uuid="bdb5fee5-042f-4e18-b674-687a7849b45c">
+    <data-source name="ticketing-app@localhost" uuid="ff5c4e11-0406-42c4-ac1a-89a1dc9e1d24">
       <database-info product="PostgreSQL" version="14.5" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.5.0" dbms="POSTGRES" exact-version="14.5" exact-driver-version="42.5">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
