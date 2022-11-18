@@ -6,7 +6,6 @@ import com.cydeo.entity.Project;
 import com.cydeo.entity.User;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
-
 @Component
 public class ProjectMapper {
 

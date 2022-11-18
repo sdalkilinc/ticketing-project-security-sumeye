@@ -17,7 +17,6 @@ import java.util.List;
 
 @Configuration
 public class SecurityConfig {
-
 //    @Bean
 //    public UserDetailsService userDetailsService(PasswordEncoder encoder){
 //
@@ -41,10 +40,10 @@ public class SecurityConfig {
         return http
                 .authorizeRequests()
 //                .antMatchers("/user/**").hasRole("ADMIN")
-                .antMatchers("/user/**").hasAuthority("ROLE_ADMIN")
-//                .antMatchers("/project/**").hasAuthority("Manager")
-//                .antMatchers("/task/employee/**").hasAuthority("Employee")
-//                .antMatchers("/task/**").hasAuthority("Manager")
+                .antMatchers("/user/**").hasAuthority("Admin")
+                .antMatchers("/project/**").hasAuthority("Manager")
+                .antMatchers("/task/employee/**").hasAuthority("Employee")
+                .antMatchers("/task/**").hasAuthority("Manager")
 //                .antMatchers("/task/**").hasAnyRole("EMPLOYEE","ADMIN")
 //                .antMatchers("/task/**").hasAuthority("ROLE_EMPLOYEE")
                 .antMatchers(
@@ -64,6 +63,5 @@ public class SecurityConfig {
                 .permitAll()
                 .and().build();
     }
-
 
 }

@@ -6,7 +6,6 @@ import com.cydeo.dto.UserDTO;
 import com.cydeo.enums.Status;
 
 import java.util.List;
-
 public interface TaskService {
 
     List<TaskDTO> listAllTasks();

@@ -4,7 +4,6 @@ import com.cydeo.dto.ProjectDTO;
 import com.cydeo.dto.UserDTO;
 
 import java.util.List;
-
 public interface ProjectService {
 
     ProjectDTO getByProjectCode(String code);
