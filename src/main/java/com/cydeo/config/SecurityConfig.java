@@ -7,6 +7,7 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -20,10 +21,10 @@ public class SecurityConfig {
 
         List<UserDetails> userList = new ArrayList<>();
 
-        userList.add(
-                new User("mike", encoder.encode("password"), Arrays.asList(new SimpleGrantedAuthority("ROLE ADMIN")));
-        )
+        userList.add(new User("mike", encoder.encode("password"), Arrays.asList(new SimpleGrantedAuthority("ROLE ADMIN"))));
+        userList.add(new User("ozzy", encoder.encode("password"), Arrays.asList(new SimpleGrantedAuthority("ROLE MANAGER"))));
 
+        return new InMemoryUserDetailsManager(userList);
 
     }
 
